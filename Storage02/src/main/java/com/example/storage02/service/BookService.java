@@ -14,4 +14,9 @@ public class BookService implements IBookService{
     public Book findById(long id) {
         return repo.findById(id).orElse(null);
     }
+
+    @Override
+    public void delete(long id) {
+        repo.deleteById(id);
+    }
 }
